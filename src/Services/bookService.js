@@ -1,8 +1,8 @@
 export async function getBooks() {
-  return await fetch("http://localhost:3001/api/books");
+  return await fetch("http://52.221.246.212:3001/api/books");
 }
 export async function addBooks(data) {
-  return await fetch("http://localhost:3001/api/new/books", {
+  return await fetch("http://52.221.246.212:3001/api/new/books", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -13,7 +13,7 @@ export async function addBooks(data) {
     .then((res) => console.log(res.message));
 }
 export async function updateBooks(id, data) {
-  return await fetch(`http://localhost:3001/api/update/books/${id}`, {
+  return await fetch(`http://52.221.246.212:3001/api/update/books/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -24,7 +24,7 @@ export async function updateBooks(id, data) {
     .then((res) => console.log(res.message));
 }
 export async function deleteBooks(id) {
-  return await fetch(`http://localhost:3001/api/delete/books/${id}`, {
+  return await fetch(`http://52.221.246.212:3001/api/delete/books/${id}`, {
     method: "DELETE",
   })
     .then((data) => data.json())
